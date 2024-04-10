@@ -2,3 +2,5 @@
 .vs/*
 Saved/Crashes/*
 Saved/Backup/*
+/Intermediate
+/Binaries
