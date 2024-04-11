@@ -5,10 +5,11 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"C:/Users/Davide/Documents/Unreal Projects/ToonTanks/Content/ComponentActor.uasset",
 				"C:/Users/Davide/Documents/Unreal Projects/ToonTanks/Content/Blueprints/ComponentActor.uasset",
 				"C:/Users/Davide/Documents/Unreal Projects/ToonTanks/Content/Blueprints/Pawns/BP_PawnTurret.uasset",
-				"C:/Users/Davide/Documents/Unreal Projects/ToonTanks/Content/Blueprints/Pawns/BP_PawnTank.uasset"
+				"C:/Users/Davide/Documents/Unreal Projects/ToonTanks/Content/Blueprints/Pawns/BP_PawnTank.uasset",
+				"C:/Users/Davide/Documents/Unreal Projects/ToonTanks/Content/Maps/Main.umap",
+				"C:/Users/Davide/Documents/Unreal Projects/ToonTanks/Content/ComponentActor.uasset"
 			]
 		}
 	]

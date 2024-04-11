@@ -4,3 +4,5 @@ Saved/Crashes/*
 Saved/Backup/*
 /Intermediate
 /Binaries
+*.state
+*.bin
