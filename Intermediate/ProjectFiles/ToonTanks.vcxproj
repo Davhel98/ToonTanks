@@ -109,6 +109,10 @@
     <None Include="..\..\ToonTanks.uproject"/>
     <None Include="..\..\Source\ToonTanks.Target.cs"/>
     <None Include="..\..\Source\ToonTanksEditor.Target.cs"/>
+    <None Include="..\..\.gitattributes"/>
+    <None Include="..\..\.gitignore"/>
+    <None Include="..\..\.vsconfig"/>
+    <None Include="..\..\LICENSE"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
@@ -119,6 +123,12 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\ToonTanks\BasePawn.h"/>
+    <ClCompile Include="..\..\Source\ToonTanks\Tank.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ToonTanks\Tank.h"/>
     <None Include="..\..\Source\ToonTanks\ToonTanks.Build.cs"/>
     <ClCompile Include="..\..\Source\ToonTanks\ToonTanks.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
