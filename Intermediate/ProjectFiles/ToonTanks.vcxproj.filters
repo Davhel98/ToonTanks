@@ -54,5 +54,11 @@
     <ClInclude Include="..\..\Source\ToonTanks\ToonTanks.h">
       <Filter>Source\ToonTanks</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ToonTanks\Tower.cpp">
+      <Filter>Source\ToonTanks</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ToonTanks\Tower.h">
+      <Filter>Source\ToonTanks</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

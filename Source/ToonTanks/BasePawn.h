@@ -15,6 +15,9 @@ public:
 	// Sets default values for this pawn's properties
 	ABasePawn();
 
+protected:
+	void RotateTurret(const FVector& LookAtTarget) const;
+	
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Pawn Components", meta= (AllowPrivateAccess="true"))
 	class UCapsuleComponent* CapsuleComp;
@@ -25,7 +28,5 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Pawn Components", meta= (AllowPrivateAccess="true"))
 	USceneComponent* ProjectileSpawnPoint;
 
-public:
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+
 };

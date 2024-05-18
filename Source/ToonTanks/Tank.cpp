@@ -27,6 +27,36 @@ void ATank::BeginPlay()
 	
 }
 
+// Called every frame
+void ATank::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	if(PlayerControllerRef)
+	{
+		FHitResult HitResult;
+		PlayerControllerRef->GetHitResultUnderCursor(
+			ECollisionChannel::ECC_Visibility,
+			false,
+			HitResult);
+
+		DrawDebugSphere(
+			GetWorld(),
+			//GetActorLocation() + FVector(0.f, 0.f, 200.f),
+			HitResult.ImpactPoint,
+			100.f,
+			12,
+			FColor::Purple,
+			false,
+			-1.f);
+
+		RotateTurret(HitResult.ImpactPoint);
+	}
+		
+	
+	
+}
+
 void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);

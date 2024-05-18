@@ -24,6 +24,8 @@ public:
 	float Speed = 10.f;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 	float TurnRate = 10.f;
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
 
 protected:
 	// Called when the game starts or when spawned
