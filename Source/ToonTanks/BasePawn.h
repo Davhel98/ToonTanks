@@ -17,6 +17,10 @@ public:
 
 protected:
 	void RotateTurret(const FVector& LookAtTarget) const;
+	void Fire();
+
+	UPROPERTY(EditDefaultsOnly, Category = "Debug")
+	bool DebugEnabled = false;
 	
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Pawn Components", meta= (AllowPrivateAccess="true"))

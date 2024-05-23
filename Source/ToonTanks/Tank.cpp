@@ -39,12 +39,13 @@ void ATank::Tick(float DeltaTime)
 			ECollisionChannel::ECC_Visibility,
 			false,
 			HitResult);
-
+		
+		if(DebugEnabled)
 		DrawDebugSphere(
 			GetWorld(),
 			//GetActorLocation() + FVector(0.f, 0.f, 200.f),
 			HitResult.ImpactPoint,
-			100.f,
+			50.f,
 			12,
 			FColor::Purple,
 			false,
@@ -63,6 +64,7 @@ void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &ATank::Move);
 	PlayerInputComponent->BindAxis(TEXT("Turn"), this, &ATank::Turn);
+	PlayerInputComponent->BindAction(TEXT("Fire"), EInputEvent::IE_Pressed, this, &ATank::Fire);
 }
 
 

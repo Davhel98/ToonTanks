@@ -32,6 +32,11 @@ void EmptyLinkFunctionForGeneratedCodeBasePawn() {}
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_DebugEnabled_MetaData[];
+#endif
+		static void NewProp_DebugEnabled_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_DebugEnabled;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_CapsuleComp_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_CapsuleComp;
@@ -63,6 +68,17 @@ void EmptyLinkFunctionForGeneratedCodeBasePawn() {}
 		{ "ModuleRelativePath", "BasePawn.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABasePawn_Statics::NewProp_DebugEnabled_MetaData[] = {
+		{ "Category", "Debug" },
+		{ "ModuleRelativePath", "BasePawn.h" },
+	};
+#endif
+	void Z_Construct_UClass_ABasePawn_Statics::NewProp_DebugEnabled_SetBit(void* Obj)
+	{
+		((ABasePawn*)Obj)->DebugEnabled = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABasePawn_Statics::NewProp_DebugEnabled = { "DebugEnabled", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ABasePawn), &Z_Construct_UClass_ABasePawn_Statics::NewProp_DebugEnabled_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABasePawn_Statics::NewProp_DebugEnabled_MetaData), Z_Construct_UClass_ABasePawn_Statics::NewProp_DebugEnabled_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABasePawn_Statics::NewProp_CapsuleComp_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -100,6 +116,7 @@ void EmptyLinkFunctionForGeneratedCodeBasePawn() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABasePawn_Statics::NewProp_ProjectileSpawnPoint = { "ProjectileSpawnPoint", nullptr, (EPropertyFlags)0x00400000000a000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABasePawn, ProjectileSpawnPoint), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABasePawn_Statics::NewProp_ProjectileSpawnPoint_MetaData), Z_Construct_UClass_ABasePawn_Statics::NewProp_ProjectileSpawnPoint_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABasePawn_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasePawn_Statics::NewProp_DebugEnabled,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasePawn_Statics::NewProp_CapsuleComp,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasePawn_Statics::NewProp_BaseMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABasePawn_Statics::NewProp_TurretMesh,
@@ -143,9 +160,9 @@ void EmptyLinkFunctionForGeneratedCodeBasePawn() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Davide_Documents_Unreal_Projects_ToonTanks_Source_ToonTanks_BasePawn_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABasePawn, ABasePawn::StaticClass, TEXT("ABasePawn"), &Z_Registration_Info_UClass_ABasePawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABasePawn), 456741112U) },
+		{ Z_Construct_UClass_ABasePawn, ABasePawn::StaticClass, TEXT("ABasePawn"), &Z_Registration_Info_UClass_ABasePawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABasePawn), 797229114U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Davide_Documents_Unreal_Projects_ToonTanks_Source_ToonTanks_BasePawn_h_2593422900(TEXT("/Script/ToonTanks"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Davide_Documents_Unreal_Projects_ToonTanks_Source_ToonTanks_BasePawn_h_1433362687(TEXT("/Script/ToonTanks"),
 		Z_CompiledInDeferFile_FID_Users_Davide_Documents_Unreal_Projects_ToonTanks_Source_ToonTanks_BasePawn_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Davide_Documents_Unreal_Projects_ToonTanks_Source_ToonTanks_BasePawn_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

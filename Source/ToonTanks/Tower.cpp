@@ -2,24 +2,16 @@
 
 
 #include "Tower.h"
-#include  "Tank.h"
+#include "Tank.h"
 #include "Kismet/GameplayStatics.h"
 
 void ATower::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if(Tank)
+	if(CheckIfTankIsInRange())
 	{
-		//Find distance to the Tank
-		float Distance = FVector::Dist(GetActorLocation(), Tank->GetActorLocation());
-		//Check if Tank is in Range
-		if(Distance <= FireRange)
-		{
-			//If in range, rotate turret toward Tank
-			RotateTurret(Tank->GetActorLocation());
-		}
-			
+		RotateTurret(Tank->GetActorLocation());
 	}
 }
 
@@ -28,4 +20,24 @@ void ATower::BeginPlay()
 	Super::BeginPlay();
 
 	Tank = Cast<ATank>(UGameplayStatics::GetPlayerPawn(this, 0));
+
+	GetWorldTimerManager().SetTimer(FireRateTimerHandle, this, &ATower::CheckFireCondition, FireRate, true);
+}
+
+void ATower::CheckFireCondition()
+{
+	if(CheckIfTankIsInRange())
+		UE_LOG(LogTemp, Display, TEXT("%s STOCAZZO"), *GetActorNameOrLabel());
+}
+
+bool ATower::CheckIfTankIsInRange() const
+{
+	if(Tank)
+	{
+		//Find distance to the Tank
+		const float Distance = FVector::Dist(GetActorLocation(), Tank->GetActorLocation());
+		//Check if Tank is in Range
+		return Distance <= FireRange;
+	}
+	return false;
 }
