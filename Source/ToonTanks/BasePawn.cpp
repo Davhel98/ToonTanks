@@ -2,6 +2,8 @@
 
 
 #include "BasePawn.h"
+
+#include "Projectile.h"
 #include "Components/CapsuleComponent.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -50,5 +52,12 @@ void ABasePawn::Fire()
 			false,
 			3.f);
 	}
+
+	FVector Location = ProjectileSpawnPoint->GetComponentLocation();
+	FRotator Rotation = ProjectileSpawnPoint->GetComponentRotation(); 
+	GetWorld()->SpawnActor<AProjectile>(
+		ProjectileClass,
+		Location,
+		Rotation);
 }
 

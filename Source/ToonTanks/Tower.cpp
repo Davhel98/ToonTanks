@@ -27,7 +27,10 @@ void ATower::BeginPlay()
 void ATower::CheckFireCondition()
 {
 	if(CheckIfTankIsInRange())
+	{
 		UE_LOG(LogTemp, Display, TEXT("%s STOCAZZO"), *GetActorNameOrLabel());
+		Fire();
+	}
 }
 
 bool ATower::CheckIfTankIsInRange() const
