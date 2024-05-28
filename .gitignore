@@ -2,7 +2,7 @@
 .vs/*
 Saved/Crashes/*
 Saved/Backup/*
-/Intermediate
-/Binaries
+Intermediate/Build/*
+Binaries/*
 *.state
 *.bin
