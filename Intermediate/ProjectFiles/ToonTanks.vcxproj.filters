@@ -72,5 +72,14 @@
     <ClInclude Include="..\..\Source\ToonTanks\Tower.h">
       <Filter>Source\ToonTanks</Filter>
     </ClInclude>
+    <Filter Include="Source\ToonTanks\GameMode">
+      <UniqueIdentifier>{18EF9207-442C-3643-8247-28BE39530390}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ToonTanks\GameMode\ToonTanksGameMode.cpp">
+      <Filter>Source\ToonTanks\GameMode</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ToonTanks\GameMode\ToonTanksGameMode.h">
+      <Filter>Source\ToonTanks\GameMode</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
