@@ -13,6 +13,8 @@
 				"C:/Users/Davide/Documents/Unreal Projects/ToonTanks/Content/Blueprints/GameMode/BP_ToonTanksGameMode.uasset",
 				"C:/Users/Davide/Documents/Unreal Projects/ToonTanks/Content/Blueprints/PlayerController/BP_ToonTanksPlayerController.uasset",
 				"C:/Users/Davide/Documents/Unreal Projects/ToonTanks/Content/Blueprints/Widgets/WBP_StartGameWidget.uasset",
+				"C:/Users/Davide/Documents/Unreal Projects/ToonTanks/Content/Blueprints/Widgets/EndGameWidget.uasset",
+				"C:/Users/Davide/Documents/Unreal Projects/ToonTanks/Content/Blueprints/Widgets/WBP_EndGameWidget.uasset",
 				"C:/Users/Davide/Documents/Unreal Projects/ToonTanks/Content/ComponentActor.uasset"
 			]
 		}

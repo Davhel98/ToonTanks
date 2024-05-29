@@ -1,7 +1,9 @@
 .idea/*
 .vs/*
 Saved/Crashes/*
+Saved/Config/CrashReportClient/*
 Saved/Backup/*
+Saved/AutoSaves/*
 Intermediate/Build/*
 Binaries/*
 *.state
