@@ -74,7 +74,7 @@ void ATank::Move(const float Value)
 	const float DeltaTime = UGameplayStatics::GetWorldDeltaSeconds(this);
 	DeltaLocation.X = Value * DeltaTime * Speed;
 
-	AddActorLocalOffset(DeltaLocation);
+	AddActorLocalOffset(DeltaLocation, true);
 }
 
 void ATank::Turn(float Value)
@@ -87,7 +87,7 @@ void ATank::Turn(float Value)
 	AddActorLocalRotation(DeltaRotation, true);
 }
 
-void ATank::HandleDesstruction()
+void ATank::HandleDestruction()
 {
 	Super::HandleDestruction();
 	SetActorHiddenInGame(true);
