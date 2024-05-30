@@ -50,6 +50,7 @@ void AProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimi
 			MyOwner,
 			DamageTypeClass
 			);
+		UGameplayStatics::SpawnEmitterAtLocation(this, HitParticles, GetActorLocation(), GetActorRotation());
 		Destroy();
 	}
 }
