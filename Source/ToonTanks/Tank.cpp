@@ -10,6 +10,7 @@
 ATank::ATank()
 {
 	PrimaryActorTick.bCanEverTick = true;
+	bIsAlive = true;
 
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("Spring Arm"));
 	SpringArm->SetupAttachment(RootComponent);
@@ -92,4 +93,5 @@ void ATank::HandleDestruction()
 	Super::HandleDestruction();
 	SetActorHiddenInGame(true);
 	SetActorTickEnabled(false);
+	bIsAlive = false;
 }

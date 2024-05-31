@@ -38,8 +38,8 @@ bool ATower::CheckIfTankIsInRange() const
 	{
 		//Find distance to the Tank
 		const float Distance = FVector::Dist(GetActorLocation(), Tank->GetActorLocation());
-		//Check if Tank is in Range
-		return Distance <= FireRange;
+		//Check if Tank is in Range and is alive
+		return Distance <= FireRange && Tank->bIsAlive;
 	}
 	return false;
 }
