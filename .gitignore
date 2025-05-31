@@ -8,3 +8,6 @@ Intermediate/Build/*
 Binaries/*
 *.state
 *.bin
+Saved/
+Builds/
+Intermediate/
